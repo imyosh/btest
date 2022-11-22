@@ -1,0 +1,28 @@
+.projectTags {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #fff;
+  flex-wrap: wrap;
+
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    border-radius: 0.6rem;
+    height: 2.1rem;
+    min-width: 3rem;
+
+    padding: 0 0.5rem;
+
+    &--addTag {
+      background: #1e212e;
+      cursor: pointer;
+      transition: background 0.3s;
+      &:hover {
+        background: #464957;
+      }
+    }
+  }
+}

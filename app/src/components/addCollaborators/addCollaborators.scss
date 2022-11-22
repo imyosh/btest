@@ -1,0 +1,52 @@
+.addCollaborators {
+  width: 50rem;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+  }
+
+  &__input {
+    width: 29.3rem;
+    height: 4.31rem;
+    background: #0e0f12;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    transition: background 0.3s;
+
+    // font-family: "Inter";
+    &::placeholder {
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: 29.3rem;
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+  }
+}
+
+.input--invalid {
+  background: rgb(212, 76, 76);
+  color: #fff;
+  &::placeholder {
+    color: #fff;
+  }
+}

@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-user-drag: none;
+  user-select: none;
+  font-family: 'Inter';
+}
+
+/* // ::selection {
+//   background-color: #524949;
+// } */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% !important;
+  height: 100%;
+  background: initial !important;
+  overflow: hidden !important;
+}
+
+body {
+  margin: 0px;
+  height: -webkit-fill-available;
+  color: #fff !important;
+}
+
+#target {
+  height: -webkit-fill-available;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 17.82rem 1fr;
+  grid-template-rows: 5.1rem 1fr;
+}
+
+form.submitted input:invalid {
+  background: rgb(212, 76, 76);
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: URL('../fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: #fff;
+}
+
+//////////////////////////////////////
+//     --- react-contextmenu ---
+
+.react-contextmenu-wrapper {
+  width: 100%;
+}
+.react-contextmenu {
+  background: #1e212e;
+  // padding: 1.1rem 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+
+.react-contextmenu-item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  &:only-child {
+    border-radius: 0.5rem;
+  }
+
+  &:hover {
+    background: #232736;
+  }
+}

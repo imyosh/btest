@@ -1,0 +1,78 @@
+.projectElement {
+  border-bottom: 1px solid #3c4155;
+  padding-bottom: 1.85rem;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.1s;
+  &:hover {
+    opacity: 0.7;
+    // color: #808dc5;
+
+    color: #813efb;
+  }
+
+  &__container {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    height: 3rem;
+  }
+
+  &__title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+  }
+
+  &__discription {
+    color: rgb(180, 180, 180);
+    transform: translateY(-2px);
+  }
+
+  &__icons {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+
+    transition: fill 0.3s;
+
+    &--red {
+      fill: rgb(255, 86, 86);
+    }
+
+    &--yellow {
+      fill: rgb(255, 216, 86);
+    }
+  }
+
+  &__deletingIcon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  &--deleting {
+    pointer-events: none;
+    opacity: 0.5;
+
+    .projectElement__deletingIcon {
+      display: initial;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.projectView {
+  padding: 0 2.75rem 2.75rem 2.75rem;
+  overflow: hidden;
+  position: relative;
+
+  display: grid;
+
+  grid-template-rows: min-content min-content 1fr min-content;
+
+  // justify-content: space-between;
+}

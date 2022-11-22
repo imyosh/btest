@@ -1,0 +1,17 @@
+.collaborator {
+  width: 8.1rem;
+  height: 8.1rem;
+  overflow: hidden;
+  background: #1e212e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__add {
+    cursor: pointer;
+    &:hover {
+      background: #292d3f;
+    }
+  }
+}

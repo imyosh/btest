@@ -1,0 +1,36 @@
+.projectDetails {
+  &__title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-top: 4.9rem;
+    margin-bottom: 0.8rem;
+
+    &--tags {
+      margin-top: 5rem;
+    }
+  }
+
+  &__collaborators {
+    width: calc(100% - 26.5rem);
+
+    max-width: 100%;
+    overflow-x: auto;
+    display: grid;
+
+    padding-bottom: 0.25rem;
+
+    grid-auto-flow: column;
+
+    align-items: center;
+    justify-content: start;
+    // margin-bottom: 0.5rem;
+    gap: 1.38rem;
+
+    flex: 1;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+      height: 0.25rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+you can view and test the app by opening it in dev mode following:
+
+- clone the repo run 'git clone https://github.com/hydarm94/bouncebox.git bouncebox'
+- cd into the project folder 'cd bouncebox'
+- run 'npm install'
+- run 'npm start'
+
+* make sure to have git and node.js installed in your system 

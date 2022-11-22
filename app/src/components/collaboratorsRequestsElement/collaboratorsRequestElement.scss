@@ -1,0 +1,62 @@
+.collaboratorsRequestElement {
+  border-bottom: 1px solid #3c4155;
+  padding: 1.5rem 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 1.5rem;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  &__email {
+    font-size: 0.9rem;
+    color: #c7c7c7;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+
+    transition: all 0.3s;
+  }
+
+  &__btn {
+    height: 3rem;
+    width: 7.86rem;
+    button {
+      border-radius: 0.75rem;
+    }
+
+    .loading-btn--pending:before {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+  &__status {
+    height: 3rem;
+    width: 16.72rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}

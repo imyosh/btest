@@ -1,0 +1,129 @@
+.addTagModal {
+  width: 50rem;
+  height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+  }
+
+  &__input {
+    width: 29.3rem;
+    height: 4.31rem;
+    background: #0e0f12;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    transition: background 0.3s;
+
+    // font-family: "Inter";
+    &::placeholder {
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 29.3rem;
+    height: 4.31rem;
+    background: #813efb;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+
+    &:hover {
+      background: rgb(112, 57, 212);
+    }
+
+    &:active {
+      background: rgb(96, 51, 179);
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+  }
+
+  &__radio {
+    &__group {
+      display: flex;
+      align-items: center;
+      gap: 4.35rem;
+      height: 3.3rem;
+    }
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 3.2rem;
+      width: 3.2rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      cursor: pointer;
+    }
+
+    &:checked::after {
+      outline: 2px solid #fff;
+    }
+
+    &--1 {
+      &::after {
+        background: #1b998b;
+      }
+    }
+
+    &--2 {
+      &::after {
+        background: #f39237;
+      }
+    }
+
+    &--3 {
+      &::after {
+        background: #ff0b6d;
+      }
+    }
+
+    &--4 {
+      &::after {
+        background: #813efb;
+      }
+    }
+
+    &--5 {
+      &::after {
+        background: #00a8e8;
+      }
+    }
+  }
+}
+
+.input--invalid {
+  background: rgb(212, 76, 76);
+  &::placeholder {
+    color: #fff;
+  }
+}

@@ -1,0 +1,55 @@
+# name of your github action
+name: CI
+# this will help you specify where to run
+on:
+  push:
+    branches:
+      # this will run on the electron branch
+      - main
+# this is where the magic happens, each job happens in parallel btw
+jobs:
+  build_on_mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@main
+        with:
+          ref: main
+      - uses: actions/setup-node@main
+        with:
+          node-version: 16.14.2
+      - name: check npm version
+        run: npm -v
+      - name: install packages
+        run: npm install --force
+      - name: see directory
+        run: ls
+      # - name: install cli-truncate
+      # run: npm install cli-truncate --save-dev
+      - name: build electron for mac
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run dist-mac
+
+      - name: zip dist files
+        run: zip -r ./bouncebox.zip ./dist/bouncebox-1.0.0.dmg
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./dist.zip
+          asset_name: my-artifact.zip
+          asset_content_type: application/zip

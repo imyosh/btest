@@ -1,0 +1,10 @@
+.myCollaborators {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  max-height: calc(100% - 16.96rem);
+  margin-top: 4.9rem;
+  overflow-y: auto;
+}

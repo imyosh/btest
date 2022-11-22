@@ -1,0 +1,8 @@
+{
+  "LOGIN": "/login",
+  "PROJECTS": "/",
+  "PROJECTVIEW": "/project-view/*",
+  "UNDOREDO": "/undoredo",
+  "COLLABORATORS": "/collaborators/*",
+  "DEVICES": "/devices"
+}

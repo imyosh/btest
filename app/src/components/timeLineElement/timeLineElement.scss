@@ -1,0 +1,61 @@
+// div:hover ~ div.second{background:yellow}
+// <div class="first">
+//    <div class="first-sub">
+//        <a href="#">first</a>
+//    </div>
+// </div>
+// <div class="second">sec</div>
+
+.timeLineElement {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  line-height: 1.2;
+
+  grid-column: 1/2;
+
+  &:hover + div.projectTimeline__version {
+    div {
+      // transform: scale(1.1);
+      outline: solid 2px #9eb0ff;
+    }
+  }
+
+  &:hover {
+    // opacity: 0.7;
+    color: #9eb0ff;
+
+    .timeLineElement__img {
+      outline: solid 2px #9eb0ff;
+    }
+
+    .timeLineElement + section {
+      div {
+        transform: scale(3);
+      }
+    }
+  }
+
+  &__img {
+    width: 2.22rem;
+    height: 2.22rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 2px;
+  }
+
+  &__group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 7rem;
+  }
+
+  &__date {
+    font-weight: bold;
+  }
+
+  &__comment {
+    overflow: hidden;
+  }
+}

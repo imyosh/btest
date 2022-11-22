@@ -1,0 +1,32 @@
+.artWork {
+  position: absolute;
+  top: 18.1rem;
+  right: 2.75rem;
+  cursor: pointer;
+
+  width: 21rem;
+  height: 21rem;
+
+  background: #1e212e;
+  color: #828282;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  transition: all 0.2s;
+}

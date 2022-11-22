@@ -1,0 +1,28 @@
+.search {
+  width: 100%;
+  height: 3.24rem;
+  position: relative;
+  margin-bottom: 3.7rem;
+  &__input {
+    width: 100%;
+    height: 3.24rem;
+    font-size: 1rem;
+    background: #1e212e;
+    color: #fff;
+    border-radius: 3px;
+    padding-left: 4.77rem;
+
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.24rem;
+  }
+}

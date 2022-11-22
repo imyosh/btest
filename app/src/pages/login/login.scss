@@ -1,0 +1,87 @@
+.login {
+  grid-row: 1/3;
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+
+  &__container {
+    width: 35rem;
+    height: 38.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.3rem;
+    position: relative;
+  }
+
+  &__input {
+    width: 29.3rem;
+    height: 4.31rem;
+    background: #1e212e;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    transition: background 0.3s;
+
+    // font-family: "Inter";
+    &::placeholder {
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 29.3rem;
+    height: 4.31rem;
+    background: #813efb;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: rgb(112, 57, 212);
+    }
+
+    &:active {
+      background: rgb(96, 51, 179);
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+  }
+
+  &__error {
+    color: rgb(237 104 104);
+    position: absolute;
+    top: 27rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+  }
+}
+
+.input--invalid {
+  background: rgb(212, 76, 76);
+  &::placeholder {
+    color: #fff;
+  }
+}
